@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Digital Pilot Logbook</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="login-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logos">
+                    <img src="images/dotr-logo.png" alt="DOTr Logo" class="auth-logo">
+                    <img src="images/caa-logo.png" alt="CAA Logo" class="auth-logo">
+                </div>
+                <h1>Log-in</h1>
+                <p style="color: white; font-style: italic; font-size: 2rem;">Welcome Back, Pilot</p>
+            </div>
+
+            <form class="auth-form" action="login.php" method="POST">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address:" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password:" required>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-black">Log-in</button>
+                </div>
+            </form>
+
+
+            <div class="auth-link">
+                <p>Don't have an account? <a href="signup.html">Sign Up here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>©2025 CAAP DOTr - Digital Pilot Logbook</p>
+        <a href="logout.php">Sign Out</a>
+    </footer>
+</body>
+
+</html>

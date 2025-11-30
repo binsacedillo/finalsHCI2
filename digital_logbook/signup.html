@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Digital Pilot Logbook</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="signup-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Sign-Up</h1>
+                <div class="auth-logos">
+                    <img src="images/dotr-logo.png" alt="DOTr Logo" class="auth-logo">
+                    <img src="images/caa-logo.png" alt="CAA Logo" class="auth-logo">
+                </div>
+            </div>
+
+            <form class="auth-form" action="signup.php" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name:" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address:" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="license_no" placeholder="Pilot License No: (Optional)">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="license_type" placeholder="License Type: (e.g., PPL)">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password:" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password:" required>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-black">Sign Up</button>
+                </div>
+            </form>
+
+            <script>
+                document.querySelector('.auth-form').addEventListener('submit', function (e) {
+                    const pw = document.querySelector('input[name="password"]').value;
+                    const confirm = document.getElementById('confirmPassword').value;
+                    if (pw !== confirm) {
+                        e.preventDefault();
+                        alert('Passwords do not match!');
+                    }
+                });
+            </script>
+
+            <div class="auth-link">
+                <p><i>Already have an account?</i> <a href="login.html">Log In Here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>©2025 CAAP DOTr - Digital Pilot Logbook</p>
+    </footer>
+</body>
+
+</html>
